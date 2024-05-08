@@ -1,6 +1,8 @@
 # react-native-ui-kit
 
-This is React Native reusable UI Kit
+This is a React Native reusable UI Kit. It contains 
+- CustomButton
+- CardView
 
 ## Installation
 
@@ -10,20 +12,35 @@ npm install react-native-ui-kit
 
 ## Usage
 
-# import CustomButton from 'rm-ui-widget';
 
-<CustomButton type={ButtonType.PRIMARY} onPress={onPrimaryPressHandler}>
+ Custom button has 5 button types available however you can customize button style and pass style in Props
+
+```js
+import CustomButton from 'rm-ui-widget';
+
+ <CustomButton type={ButtonType.PRIMARY} onPress={onPrimaryPressHandler}>
 		<Text>Primary Button</Text>
 </CustomButton>
 
 <CustomButton type={ButtonType.SECONDARY}>
 	<Text>Secondary Button</Text>
 </CustomButton>
-
-# Custom button has 5 button type available however you can customize button style and pass style in Props
-
+```
+## Customize button with custom style:
 ```js
-// ...
+export type Props = {
+  children: React.ReactElement;
+  onPress?: () => void;
+  style?: ViewStyle;
+  type?: ButtonType;
+};
+```
+# CardView
+```js
+import CardView from 'rm-ui-widget';
+<View style={styles.container}>
+  <CardView />
+</View>
 ```
 
 ## Contributing
