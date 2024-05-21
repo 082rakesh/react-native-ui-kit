@@ -1,7 +1,4 @@
 import CustomButton from './Button/CustomButton';
-import CardView from './CardView/CardView';
+// import CardView from './CardView/CardView';
 
-export default {
-  CustomButton,
-  CardView,
-};
+export default CustomButton;
