@@ -1,6 +1,7 @@
 import { StyleSheet, Pressable, type ViewStyle } from 'react-native';
 import React from 'react';
 import { ButtonStyle, ButtonType } from './ButtonStyle';
+import SHOPPING from '../assets/images/shopping.svg';
 
 export type Props = {
   children: React.ReactElement;
@@ -17,6 +18,7 @@ const CustomButton = ({
 }: Props) => {
   return (
     <Pressable style={[styles[type], { ...style }]} onPress={onPress}>
+      <SHOPPING width={40} height={40} />
       {children}
     </Pressable>
   );
